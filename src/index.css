@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html body {
+    scroll-behavior: smooth;
+}
+
+#title{
+    font-size: 50px;
+    filter: drop-shadow(0px 0px 20px #3730a3);
+    color: #3730a3 ;
+    
+}
+
+#myphoto{
+    width: 35rem;
+    height: 45rem;
+}
+
+
+
+::-webkit-scrollbar {
+    height: 0;
+    width: .75rem;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(#3730a3,rgb(69, 192, 241)); 
+    border-radius: 2rem;
+  }
+  ::-webkit-scrollbar-track {
+    background-image: linear-gradient(to top , #fff , #777);
+  }
+  
+
+    
+#change-texts::before {
+    display: inline-block;
+    display: none;
+    content: "";
+    width: 2px;
+    height: 1px;
+    background-color: #000;
+    position: relative;
+    right: 0;
+    animation: animation 5s linear alternate infinite;
+        }
+  
+    #change-texts::after {
+    content: "I am Full-Stack Development ";
+    display: inline;
+    animation: animation 5s steps(11) infinite;
+    width: 0ch;
+    color: lightseagreen;
+    }
+  
+  #change-texts {
+    font-size: 3rem;
+    overflow: hidden;
+    /* position: relative; */
+    color: #000;
+    background: linear-gradient(90deg, #3730a3,#00e1ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    }
+    @keyframes animation{
+      25%{
+          content:"I am Senior Front-End Developer";
+          width:10.5ch;
+      }
+      40%{
+        content:"I am Senior UI/UX Designer";
+        width: 0ch;
+      }
+      75%{
+        content:"I am Junior Mobail Application Developer";
+        width: 9.5ch;
+      }
+      90%{
+       
+        width: 10.5ch;
+      }
+  }
+  @keyframes blinking{
+      100%{
+          opacity: 0;
+      }
+  }
+
+
+
+  .scroll-scale{
+    opacity: 0;
+    transform:scale(.9);
+    transition: all 2s;
+  }
+  .show-items{
+    opacity: 1;
+    transform: translateX(0); 
+  
+  }
+  .scroll-bottom{
+      opacity: 0;
+      transform: translateX(300px);
+      transition: all 2s;
+  }
+  .scroll-top{
+    opacity: 0;
+    transform: translateX(-300px);
+    transition: all 2s;
+  }
+  
+  
+  @keyframes slideRight{
+    0%{
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    100%{
+      transform: translateX(0px);
+      opacity: 1;
+    }}
+  
+    @keyframes slideleft{
+      0%{
+        transform: translateX(100px);
+        opacity: 0;
+      }
+      100%{
+        transform: translateX(0px);
+        opacity: 1;
+      }
+    } 
